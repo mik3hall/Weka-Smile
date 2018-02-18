@@ -51,9 +51,18 @@ weka.clusterers.BIRCH -k 6 -B 5 -T 0.5 -S 1
 
 This still uses cluster number 0 for outliers. It can be visualized in the same way.
 
-You can compare the visualizations against demos in Smile. They seem roughly correct.
+SpectralClustering
+==================
+Dimension reducing clustering based on similarity. 
 
+Example: From a Smile demo.
+In the data directory select the file clustering/nonconvex/sincos.arff
 
+```
+weka.clusterers.SpectralClustering -k 2 -w 0.25 -S 1
+```
 
+For some reason -w width of .1 works with Smile but not with this.
 
+You can compare the visualizations against the demos in Smile. They seem roughly correct.
 

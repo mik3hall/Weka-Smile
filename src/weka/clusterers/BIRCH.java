@@ -203,7 +203,6 @@ public class BIRCH extends RandomizableClusterer {
     */
     @Override
     public void setOptions(String[] options) throws Exception {
-    	System.out.println("BIRCH set options");
 		String temp = Utils.getOption("k", options);
 		if (temp.length() > 0) {
 		  setNumClusters(Integer.parseInt(temp));
@@ -232,7 +231,6 @@ public class BIRCH extends RandomizableClusterer {
   @Override
   public Enumeration<Option> listOptions() {
     Vector<Option> result = new Vector<Option>();
-	System.out.println("BIRCH list options");
     result.addElement(new Option("\tThe cluster number.\n" + "\t(default 2).",
       "N", 1, "-N <num>"));
       
